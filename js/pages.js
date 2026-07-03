@@ -49,7 +49,7 @@ function renderHome() {
 
     <!-- Hero -->
     <div class="hero">
-      <span class="badge">${I.award} 政府监管 · 官方平台</span>
+      <span class="badge">${I.award} 政府监管</span>
       <h2>千年潮州文脉<br/>一站式研学服务</h2>
       <p>21 家认证基地 · 4 部门联合监管</p>
       <div class="hero-search">
