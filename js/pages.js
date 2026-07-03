@@ -9,15 +9,7 @@ const D = window.DATA;
 function navbar(title, opts = {}) {
   const right = opts.right || `<button class="icon-btn" onclick="toast('搜索功能 Demo')">${I.search}</button>`;
   return `
-    <div class="statusbar">
-      <span>9:41</span>
-      <span class="icons">
-        <svg viewBox="0 0 18 12" fill="currentColor"><path d="M1 9h2v2H1zM5 7h2v4H5zM9 5h2v6H9zM13 2h2v9h-2z"/></svg>
-        <svg viewBox="0 0 16 11" fill="currentColor"><path d="M8 2C5 2 2.5 3 1 4.5L0 3.5C2 1.5 4.8 0 8 0s6 1.5 8 3.5L15 4.5C13.5 3 11 2 8 2zm0 3C6.4 5 5 5.7 4 6.7L3 5.7C4.3 4.4 6 3.5 8 3.5s3.7.9 5 2.2l-1 1C11 5.7 9.6 5 8 5zm0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
-        <svg viewBox="0 0 24 12" fill="none"><rect x="1" y="1" width="20" height="10" rx="2.5" stroke="currentColor" stroke-opacity=".4"/><rect x="2.5" y="2.5" width="15" height="7" rx="1" fill="currentColor"/><rect x="22" y="4" width="1.5" height="4" rx=".5" fill="currentColor"/></svg>
-      </span>
-    </div>
-    <div class="navbar">
+    <div class="navbar" style="padding-top:calc(8px + var(--safe-top))">
       ${opts.back ? `<button class="icon-btn" onclick="history.back()">${I.chevL}</button>` : ''}
       <div class="title" style="${opts.back ? '' : 'margin-left:4px'}">${title}</div>
       <div class="nav-actions">${right}</div>
@@ -252,12 +244,7 @@ function renderMine() {
   const main = el('app-main');
   const loggedIn = window.__user;
   main.innerHTML = `
-    <div class="statusbar"><span>9:41</span><span class="icons">
-      <svg viewBox="0 0 18 12" fill="currentColor"><path d="M1 9h2v2H1zM5 7h2v4H5zM9 5h2v6H9zM13 2h2v9h-2z"/></svg>
-      <svg viewBox="0 0 16 11" fill="currentColor"><path d="M8 2C5 2 2.5 3 1 4.5L0 3.5C2 1.5 4.8 0 8 0s6 1.5 8 3.5L15 4.5C13.5 3 11 2 8 2zm0 3C6.4 5 5 5.7 4 6.7L3 5.7C4.3 4.4 6 3.5 8 3.5s3.7.9 5 2.2l-1 1C11 5.7 9.6 5 8 5zm0 3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
-      <svg viewBox="0 0 24 12" fill="none"><rect x="1" y="1" width="20" height="10" rx="2.5" stroke="currentColor" stroke-opacity=".4"/><rect x="2.5" y="2.5" width="15" height="7" rx="1" fill="currentColor"/><rect x="22" y="4" width="1.5" height="4" rx=".5" fill="currentColor"/></svg>
-    </span></div>
-    <div class="profile-hero">
+    <div class="profile-hero" style="padding-top:calc(24px + var(--safe-top))">
       <div class="profile-top">
         <div class="avatar">${loggedIn ? `<img src="${IMG('avatar', 100, 100)}"/>` : I.mine}</div>
         <div style="flex:1">
