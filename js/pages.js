@@ -360,7 +360,7 @@ function renderDetail(q) {
 
   main.innerHTML = `
     <div class="detail-hero">
-      <img src="${item.img.replace(/\/\d+\/\d+$/, '/800/520')}" />
+      <img src="${item.img}" />
       <div class="back" onclick="history.back()">${I.chevL}</div>
     </div>
     <div class="detail-body">
