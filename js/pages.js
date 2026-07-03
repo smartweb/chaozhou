@@ -461,9 +461,9 @@ function renderMentors(main) {
     <div class="section">
       <div class="search-bar">${I.search}<input placeholder="搜索导师、专业领域..." /></div>
       <div class="list">
-        ${mentors.map(m => `
+        ${mentors.map((m, i) => `
           <div class="card card-pad flex aic" style="gap:14px;cursor:pointer" onclick="toast('${m.name} 详情 Demo')">
-            <img src="${IMG('mentor' + m.name, 100, 100)}" style="width:56px;height:56px;border-radius:50%;object-fit:cover" />
+            <img src="${IMG('mentor' + (i + 1), 100, 100)}" style="width:56px;height:56px;border-radius:50%;object-fit:cover" />
             <div style="flex:1">
               <div class="flex aic" style="gap:8px">
                 <strong style="font-size:15px">${m.name}</strong>

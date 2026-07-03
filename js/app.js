@@ -35,58 +35,10 @@ const ICONS = {
 };
 
 /* ---------- Mock data ---------- */
-/* 本地生成的品牌化 SVG 占位图（data URI 内联，零网络依赖，国内秒开） */
-const __IMG_SEED_MAP = {
-  // 基地
-  guangji: { label: '广济桥', sub: '非遗研学基地', hue: 8 },
-  paifang: { label: '牌坊街', sub: '文化研学基地', hue: 24 },
-  ciqi:    { label: '潮州窑', sub: '陶瓷研学基地', hue: 200 },
-  fenghuang:{ label: '凤凰山', sub: '茶文化基地', hue: 140 },
-  hanwen:  { label: '韩文公祠', sub: '国学基地', hue: 280 },
-  longhu:  { label: '龙湖古寨', sub: '民俗基地', hue: 32 },
-  // 路线
-  route1:  { label: '古城非遗', sub: '2 日研学路线', hue: 8 },
-  route2:  { label: '单丛茶香', sub: '3 日研学营', hue: 140 },
-  route3:  { label: '红棉英烈', sub: '红色研学', hue: 0 },
-  route4:  { label: '陶瓷工业', sub: '2 日研学', hue: 200 },
-  // 课程
-  course1: { label: '潮绣', sub: '技艺大师课', hue: 320 },
-  course2: { label: '木雕', sub: '入门课程', hue: 24 },
-  course3: { label: '朱泥壶', sub: '制作课程', hue: 12 },
-  course4: { label: '工夫茶', sub: '茶艺课', hue: 150 },
-  course5: { label: '潮剧脸谱', sub: '绘画课', hue: 280 },
-  // 资讯
-  news1:   { label: '政策', sub: '教育局通知', hue: 210 },
-  news2:   { label: '基地', sub: '资质评定', hue: 8 },
-  news3:   { label: '活动', sub: '研学季开启', hue: 140 },
-  news4:   { label: '运维', sub: '年度复审', hue: 200 },
-  news5:   { label: '安全', sub: '服务升级', hue: 24 },
-  // banner / 其他
-  banner:  { label: '暑期研学季', sub: '限时优惠 · 官方认证', hue: 8 },
-  avatar:  { label: '', sub: '', hue: 8 },
-};
-const __DEFAULT_META = { label: '研学', sub: '潮州官方平台', hue: 8 };
-const IMG = (seed, w = 600, h = 400) => {
-  const meta = __IMG_SEED_MAP[seed] || __DEFAULT_META;
-  const { label, sub, hue } = meta;
-  // 横向渐变 + 装饰圆 + 文字
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
-    <defs>
-      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="hsl(${hue}, 78%, 58%)"/>
-        <stop offset="100%" stop-color="hsl(${hue + 18}, 65%, 38%)"/>
-      </linearGradient>
-    </defs>
-    <rect width="${w}" height="${h}" fill="url(#g)"/>
-    <circle cx="${w * 0.85}" cy="${h * 0.18}" r="${Math.min(w, h) * 0.32}" fill="rgba(255,255,255,0.10)"/>
-    <circle cx="${w * 0.12}" cy="${h * 0.88}" r="${Math.min(w, h) * 0.22}" fill="rgba(255,255,255,0.08)"/>
-    <g fill="rgba(255,255,255,0.95)" font-family="-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" text-anchor="middle">
-      ${label ? `<text x="${w / 2}" y="${h / 2 - 4}" font-size="${Math.round(Math.min(w, h) / (label.length > 3 ? 5 : 3.5))}" font-weight="700" letter-spacing="2">${label}</text>` : ''}
-      ${sub ? `<text x="${w / 2}" y="${h / 2 + Math.round(Math.min(w, h) / 9)}" font-size="${Math.round(Math.min(w, h) / 14)}" font-weight="500" opacity="0.92">${sub}</text>` : ''}
-    </g>
-  </svg>`;
-  return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
-};
+/* 本地 SVG 占位图（assets/ 目录，零外部依赖，国内秒开）
+   w/h 参数保留兼容旧调用，实际尺寸由 SVG 矢量自适应 */
+const __IMG_FALLBACK = 'assets/banner.svg';
+const IMG = (seed, w = 600, h = 400) => `assets/${seed}.svg`;
 
 const DATA = {
   /* Base list (研学基地) — 21 bases per spec */
