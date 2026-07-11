@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>潮州市研学管理服务平台 · 建设方案 | 智维科技</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23c8102e'/><path d='M50 18 L60 42 L86 42 L65 58 L73 84 L50 68 L27 84 L35 58 L14 42 L40 42 Z' fill='white'/></svg>">
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- ============ 01 COVER ============ -->
+<section class="slide cover active" data-title="封面">
+  <div class="cover-inner">
+    <div class="cover-logo">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4zm0 5 1.5 3.2 3.5.4-2.5 2.4.6 3.5L12 14.9 8.9 16.5l.6-3.5L7 10.6l3.5-.4L12 7z"/></svg>
+    </div>
+    <div class="eyebrow"><span class="dot"></span>潮州市产投集团 · 投标建设方案</div>
+    <h1>潮州市研学管理<br>服务平台 <span class="accent">建设方案</span></h1>
+    <p class="lead">政府监管 · 学校申报 · 家长缴费 — 三端协同的研学全流程数字化平台</p>
+
+    <div class="cover-meta">
+      <div class="cm-item"><div class="l">投标方</div><div class="v">智维科技（深圳）有限公司</div></div>
+      <div class="cm-item"><div class="l">报价</div><div class="v">¥500,000</div></div>
+      <div class="cm-item"><div class="l">交付</div><div class="v">2026 年 9 月初上线</div></div>
+      <div class="cm-item"><div class="l">日期</div><div class="v">2026 年 7 月</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 TOC ============ -->
+<section class="slide" data-title="目录">
+  <div class="slide-num">02 / <span>22</span></div>
+  <div class="eyebrow blue"><span class="dot"></span>CONTENTS · 方案纲要</div>
+  <h1 class="slide-title">方案<span class="accent">目录</span></h1>
+  <p class="slide-sub">本方案围绕「业务理解 — 方案设计 — 实施保障 — 报价商务」四个维度展开，覆盖客户评估的全部关键决策点。</p>
+
+  <div class="toc flex-1 center-y">
+    <div class="toc-item"><div class="toc-num">01</div><div class="toc-title">项目背景与建设目标</div><div class="toc-desc">政策驱动 · 行业痛点 · 建设愿景</div><div class="toc-pages">P3–4</div></div>
+    <div class="toc-item"><div class="toc-num">02</div><div class="toc-title">业务理解：三大角色 · 九步流程</div><div class="toc-desc">深度拆解学校 / 政府 / 运维全链路</div><div class="toc-pages">P5–8</div></div>
+    <div class="toc-item"><div class="toc-num">03</div><div class="toc-title">产品方案与功能蓝图</div><div class="toc-desc">五端架构 · 核心功能 · 交互演示</div><div class="toc-pages">P9–15</div></div>
+    <div class="toc-item"><div class="toc-num">04</div><div class="toc-title">技术架构与安全保障</div><div class="toc-desc">微服务 · 等保二级 · 数据安全</div><div class="toc-pages">P16–17</div></div>
+    <div class="toc-item"><div class="toc-num">05</div><div class="toc-title">项目实施计划</div><div class="toc-desc">2 个月甘特图 · 里程碑 · 团队</div><div class="toc-pages">P18–19</div></div>
+    <div class="toc-item"><div class="toc-num">06</div><div class="toc-title">报价 · 风险控制 · 售后服务</div><div class="toc-desc">50 万明细 · 质量保障 · 3 年运维</div><div class="toc-pages">P20–22</div></div>
+  </div>
+</section>
+
+<!-- ============ 03 BACKGROUND ============ -->
+<section class="slide" data-title="项目背景">
+  <div class="slide-num">03 / <span>22</span></div>
+  <div class="eyebrow"><span class="dot"></span>01 · 项目背景</div>
+  <h1 class="slide-title">研学正成为<span class="accent">素质教育新基建</span></h1>
+  <p class="slide-sub">国家政策持续加码，研学旅行已从「可选」变为「必修」。潮州拥有全国顶级的非遗与历史文化资源，亟需一个统一的数字化平台，把资源、学校、家长、监管方高效连接起来。</p>
+
+  <div class="grid g3 flex-1">
+    <div class="card">
+      <div class="card-icon brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M14 9h1M14 13h1"/></svg></div>
+      <div class="card-title mt-16">政策驱动</div>
+      <div class="card-desc">教育部等 11 部门《关于推进中小学生研学旅行的意见》明确将研学纳入教育教学计划。广东省要求每生每学年至少完成 1 次研学。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="card-title mt-16">潮州资源禀赋</div>
+      <div class="card-desc"><strong>17 项国家级非遗</strong>、广济桥、牌坊街、凤凰山单丛茶…潮州是天然研学宝库，但缺乏统一管理与对外输出的数字化出口。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <div class="card-title mt-16">管理缺位痛点</div>
+      <div class="card-desc">学校各自联系旅行社、缺乏资质审核、安全事故风险高、费用不透明、政府无法有效监管 — 这些正是本平台要解决的问题。</div>
+    </div>
+  </div>
+
+  <div class="row mt-32" style="gap:32px">
+    <div class="stat" style="flex:1"><div class="num brand">21+</div><div class="lbl">认证研学基地待接入</div><div class="sub">含国家级、省级、市级</div></div>
+    <div class="stat" style="flex:1"><div class="num amber">4</div><div class="lbl">政府监管部门</div><div class="sub">教育 · 文广旅体 · 交运 · 产投</div></div>
+    <div class="stat" style="flex:1"><div class="num blue">300+</div><div class="lbl">潮州中小学校</div><div class="sub">潜在平台用户</div></div>
+    <div class="stat" style="flex:1"><div class="num green">20万+</div><div class="lbl">中小学生家庭</div><div class="sub">年度研学需求</div></div>
+  </div>
+</section>
+
+<!-- ============ 04 VISION ============ -->
+<section class="slide" data-title="建设目标">
+  <div class="slide-num">04 / <span>22</span></div>
+  <div class="eyebrow green"><span class="dot"></span>01 · 建设目标</div>
+  <h1 class="slide-title">一个平台，<span class="accent">三端协同</span><br>让研学<span class="grad">可管、可溯、可评</span></h1>
+  <p class="slide-sub">不是简单的报名系统，而是连接政府、学校、基地、服务商、家长的「研学产业操作系统」。所有环节线上化、留痕化、可评价、可结算。</p>
+
+  <div class="grid g3 flex-1 center-y mt-16" style="align-content:center">
+    <div class="card hover" style="border-color:var(--brand)">
+      <div class="feature-num">可<br>管</div>
+      <div class="card-title mt-16" style="font-size:18px">政府监管闭环</div>
+      <div class="card-desc">报备 → 审核 → 执行 → 评价 → 结算，全程留痕。教育局、文广旅体局、交运、产投四部门在线协同，数据实时穿透。</div>
+    </div>
+    <div class="card hover" style="border-color:var(--blue)">
+      <div class="feature-num" style="background:linear-gradient(135deg,#0070f3,#00b3ff);-webkit-background-clip:text;background-clip:text;color:transparent">可<br>溯</div>
+      <div class="card-title mt-16" style="font-size:18px">全链路追溯</div>
+      <div class="card-desc">每一次研学从学校发起需求到家长缴费签约，每一个执行环节（交通、餐饮、住宿、导师）均有订单与复核记录，事后可追溯。</div>
+    </div>
+    <div class="card hover" style="border-color:var(--green)">
+      <div class="feature-num" style="background:linear-gradient(135deg,#0a8a4a,#22c55e);-webkit-background-clip:text;background-clip:text;color:transparent">可<br>评</div>
+      <div class="card-title mt-16" style="font-size:18px">评价驱动结算</div>
+      <div class="card-desc">活动结束后学校对各环节评分，评价结果直接关联服务商结算与后续推荐权重，形成「优胜劣汰」的良性生态。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 THREE ROLES ============ -->
+<section class="slide" data-title="三大角色">
+  <div class="slide-num">05 / <span>22</span></div>
+  <div class="eyebrow purple"><span class="dot"></span>02 · 业务理解</div>
+  <h1 class="slide-title">三大<span class="accent">核心角色</span>，各司其职</h1>
+  <p class="slide-sub">平台服务三类用户：发起需求的学校（家委）、行使审批监管的政府部门、负责资源上架与运营的产投平台运维方。家长通过小程序完成报名缴费。</p>
+
+  <div class="row flex-1 mt-16" style="gap:16px;align-items:stretch">
+    <div class="persona">
+      <div class="persona-head">
+        <div class="persona-avatar" style="background:var(--brand-soft);color:var(--brand)">🏫</div>
+        <div><div class="persona-name">学校 / 家委</div><div class="persona-role">需求发起方 · 评价方</div></div>
+      </div>
+      <div class="persona-quote">"我们要确定日期、统计人数、勾选基地和配套服务，然后走审核，最后让家长报名缴费。流程太长了，全靠 Excel 和微信群根本管不过来。"</div>
+      <ul class="persona-list">
+        <li>预报名：男女、减免、老师人数</li>
+        <li>勾选基地 + 交通 + 旅行社 + 保险 + 导师 + 餐饮 + 住宿</li>
+        <li>形成出行需求单，发起审核</li>
+        <li>推送家长报名缴费、购险、签约</li>
+        <li>活动后对各环节评价</li>
+      </ul>
+    </div>
+    <div class="persona">
+      <div class="persona-head">
+        <div class="persona-avatar" style="background:var(--blue-soft);color:var(--blue)">🏛️</div>
+        <div><div class="persona-name">政府部门</div><div class="persona-role">监管审核方</div></div>
+      </div>
+      <div class="persona-quote">"我们要对每一条研学路线把关：资质是否合规、交通是否安全、保险是否到位。以前只能看纸质材料，现在要在线审批、留痕可查。"</div>
+      <ul class="persona-list">
+        <li>教育局：业务合规性审核</li>
+        <li>文广旅体：基地 / 路线资质</li>
+        <li>交通运输：车辆与运输资质</li>
+        <li>产投集团：业务分发与执行</li>
+        <li>报备 → 审核（通过 / 退回）</li>
+      </ul>
+    </div>
+    <div class="persona">
+      <div class="persona-head">
+        <div class="persona-avatar" style="background:var(--green-soft);color:var(--green)">⚙️</div>
+        <div><div class="persona-name">平台运维方</div><div class="persona-role">资源运营方</div></div>
+      </div>
+      <div class="persona-quote">"21 家基地、旅行社、运输、保险、餐饮、住宿、导师…所有资源由我们上架、审核资质、组织分发，还要做财务审核和数据分析。"</div>
+      <ul class="persona-list">
+        <li>基地 / 服务商上架管理</li>
+        <li>资质审核与年检</li>
+        <li>人才库（导师）管理</li>
+        <li>财务审核与结算</li>
+        <li>数据分析与后台维护</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 NINE-STEP FLOW ============ -->
+<section class="slide" data-title="九步流程">
+  <div class="slide-num">06 / <span>22</span></div>
+  <div class="eyebrow"><span class="dot"></span>02 · 业务理解 · 核心</div>
+  <h1 class="slide-title">学校端<span class="accent">九步业务流程</span>全拆解</h1>
+  <p class="slide-sub">这是整个平台的「主血脉」。我们对需求文档中的 9 个环节逐一建模，确保每一步都在系统中可执行、可流转、可监控。</p>
+
+  <div class="flex-1 center-y">
+    <div class="flow">
+      <div class="flow-step"><div class="fs-num">STEP 01</div><div class="fs-title">日期确定 · 预报名</div><div class="fs-desc">学校收集名单：男女、减免、老师</div></div>
+      <div class="flow-step"><div class="fs-num">STEP 02</div><div class="fs-title">勾选菜单</div><div class="fs-desc">基地 / 交通 / 旅行社 / 保险 / 导师 / 餐饮 / 住宿</div></div>
+      <div class="flow-step"><div class="fs-num">STEP 03</div><div class="fs-title">被选单位复核</div><div class="fs-desc">执行单位确认接单能力</div></div>
+      <div class="flow-step"><div class="fs-num">STEP 04</div><div class="fs-title">推送行政审核</div><div class="fs-desc">教育 / 文广旅体 / 产投 / 交运</div></div>
+      <div class="flow-step"><div class="fs-num">STEP 05</div><div class="fs-title">业务单分发</div><div class="fs-desc">产投组织分发 · 确认执行人</div></div>
+    </div>
+    <div style="text-align:center;color:var(--brand);font-size:18px;margin:10px 0">▼</div>
+    <div class="flow">
+      <div class="flow-step"><div class="fs-num">STEP 06</div><div class="fs-title">家长报名缴费</div><div class="fs-desc">报名 + 缴费 + 购险 + 签约</div></div>
+      <div class="flow-step"><div class="fs-num">STEP 07</div><div class="fs-title">订单推送确认</div><div class="fs-desc">确定人数 · 各环节复核</div></div>
+      <div class="flow-step"><div class="fs-num">STEP 08</div><div class="fs-title">活动执行评价</div><div class="fs-desc">学校对各环节打分评价</div></div>
+      <div class="flow-step"><div class="fs-num">STEP 09</div><div class="fs-title">系统评价结算</div><div class="fs-desc">依据评分自动结算各环节</div></div>
+      <div class="flow-step" style="border-color:var(--brand);background:var(--brand-soft)"><div class="fs-num">✓ 闭环</div><div class="fs-title">完成</div><div class="fs-desc">数据沉淀 · 反哺运营</div></div>
+    </div>
+
+    <div class="row mt-32" style="gap:12px">
+      <div class="pill brand">9 个状态机节点</div>
+      <div class="pill blue">4 部门会签审核</div>
+      <div class="pill green">7 类执行环节</div>
+      <div class="pill amber">评价 → 结算联动</div>
+      <div class="pill">家长电子签约</div>
+      <div class="pill">全程留痕可溯</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 PAIN POINTS ============ -->
+<section class="slide" data-title="痛点分析">
+  <div class="slide-num">07 / <span>22</span></div>
+  <div class="eyebrow amber"><span class="dot"></span>02 · 业务理解</div>
+  <h1 class="slide-title">当前<span class="accent">五大痛点</span>，我们逐个击破</h1>
+  <p class="slide-sub">基于对潮州研学现状的调研，我们识别出当前运作模式的核心问题，并给出平台的针对性解法。</p>
+
+  <div class="grid g2 flex-1 center-y mt-16" style="gap:16px">
+    <div class="card hover">
+      <div class="row between">
+        <div class="card-title"><span class="pill brand">痛点 01</span> 资质参差不齐，安全风险高</div>
+      </div>
+      <div class="card-desc mt-8">学校自行联系旅行社、大巴，难以核验资质，一旦出事故责任不清。</div>
+      <div class="mt-16" style="padding:12px;background:var(--green-soft);border-radius:8px;font-size:12px;color:var(--green);font-weight:600">✓ 平台解法：所有服务商入驻须资质审核 + 年检，交通/保险强制校验，黑白名单机制</div>
+    </div>
+    <div class="card hover">
+      <div class="row between">
+        <div class="card-title"><span class="pill brand">痛点 02</span> 审批靠纸质，政府监管难</div>
+      </div>
+      <div class="card-desc mt-8">报备材料线下传递，多部门会签效率低，无法实时掌握全市研学动态。</div>
+      <div class="mt-16" style="padding:12px;background:var(--green-soft);border-radius:8px;font-size:12px;color:var(--green);font-weight:600">✓ 平台解法：在线报备 + 多部门会签工作台，数据看板实时呈现全市研学情况</div>
+    </div>
+    <div class="card hover">
+      <div class="row between">
+        <div class="card-title"><span class="pill brand">痛点 03</span> 费用不透明，家长存疑虑</div>
+      </div>
+      <div class="card-desc mt-8">费用由学校代收或旅行社收取，明细不清，缺乏信任，退费纠纷多。</div>
+      <div class="mt-16" style="padding:12px;background:var(--green-soft);border-radius:8px;font-size:12px;color:var(--green);font-weight:600">✓ 平台解法：家长端在线缴费 + 费用明细透明 + 资金存管 + 电子签约保障</div>
+    </div>
+    <div class="card hover">
+      <div class="row between">
+        <div class="card-title"><span class="pill brand">痛点 04</span> 评价缺失，服务质量无反馈</div>
+      </div>
+      <div class="card-desc mt-8">活动结束后缺乏系统性评价，优质服务商得不到激励，劣质服务持续存在。</div>
+      <div class="mt-16" style="padding:12px;background:var(--green-soft);border-radius:8px;font-size:12px;color:var(--green);font-weight:600">✓ 平台解法：标准化评价体系 + 评分驱动结算与排序，形成优胜劣汰生态</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 OUR ADVANTAGE ============ -->
+<section class="slide" data-title="我们的优势">
+  <div class="slide-num">08 / <span>22</span></div>
+  <div class="eyebrow"><span class="dot"></span>03 · 为什么选择我们</div>
+  <h1 class="slide-title">不止于<span class="accent">交付系统</span>，<br>更交付一个<span class="grad">能落地的业务闭环</span></h1>
+  <p class="slide-sub">我们最大的差异化：投标前已投入研发资源，做出了<strong style="color:var(--fg)">可交互的 Demo</strong>。您今天看到的所有界面都不是效果图，而是真实运行的代码 — 这意味着我们对需求的理解已经过验证，交付风险大幅降低。</p>
+
+  <div class="grid g4 flex-1 center-y mt-16">
+    <div class="card hover" style="border-color:var(--brand)">
+      <div class="card-icon brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></div>
+      <div class="card-title mt-16">已有可运行 Demo</div>
+      <div class="card-desc">投标即提供线上 Demo，需求理解零偏差，启动即可进入正式开发，省去 2-3 周需求确认期。</div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <div class="card-title mt-16">政务项目经验</div>
+      <div class="card-desc">团队具备多端协同政务平台经验，熟悉等保合规、电子签章、资金存管等政府类项目要求。</div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <div class="card-title mt-16">2 个月硬承诺</div>
+      <div class="card-desc">Demo 已完成 30% 工作量，配合成熟脚手架与并行开发，9 月初上线是<strong>已验证的承诺</strong>，非空头支票。</div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg></div>
+      <div class="card-title mt-16">长期陪跑</div>
+      <div class="card-desc">不收一次性交付费思维。3 年质保 + 运维陪跑，关注平台上线后的真实使用与持续迭代。</div>
+    </div>
+  </div>
+
+  <div class="mt-24" style="padding:18px 24px;background:var(--brand-soft);border-radius:var(--radius);border-left:3px solid var(--brand)">
+    <div style="font-size:13px;color:var(--brand);font-weight:700">💡 关键差异化</div>
+    <div style="font-size:15px;color:var(--fg);margin-top:6px">大多数投标方此刻还在画 PPT 效果图。<strong>我们交付的是已经能点的产品</strong> — 这是最有力的需求理解证明，也是交付信心的来源。</div>
+  </div>
+</section>
+
+<!-- ============ 09 PRODUCT OVERVIEW ============ -->
+<section class="slide" data-title="产品总览">
+  <div class="slide-num">09 / <span>22</span></div>
+  <div class="eyebrow blue"><span class="dot"></span>03 · 产品方案</div>
+  <h1 class="slide-title"><span class="accent">五端</span>协同的产品矩阵</h1>
+  <p class="slide-sub">一个平台，五个终端，覆盖从家长报名到政府监管的完整链路。各端数据实时互通，权限严格隔离。</p>
+
+  <div class="grid g5 flex-1 center-y mt-16" style="gap:14px">
+    <div class="card hover" style="text-align:center;padding:28px 18px;border-color:var(--brand)">
+      <div style="font-size:40px;margin-bottom:12px">📱</div>
+      <div style="font-size:15px;font-weight:700">家长小程序</div>
+      <div class="card-desc mt-8" style="font-size:12px">浏览路线课程<br>报名缴费购险<br>电子签约 · 查看行程</div>
+      <div class="mt-16"><span class="pill brand">核心入口</span></div>
+    </div>
+    <div class="card hover" style="text-align:center;padding:28px 18px">
+      <div style="font-size:40px;margin-bottom:12px">🏫</div>
+      <div style="font-size:15px;font-weight:700">学校 Web 端</div>
+      <div class="card-desc mt-8" style="font-size:12px">预报名管理<br>需求单勾选<br>发起审核 · 评价</div>
+      <div class="mt-16"><span class="pill">PC 浏览器</span></div>
+    </div>
+    <div class="card hover" style="text-align:center;padding:28px 18px">
+      <div style="font-size:40px;margin-bottom:12px">🏛️</div>
+      <div style="font-size:15px;font-weight:700">政府工作台</div>
+      <div class="card-desc mt-8" style="font-size:12px">在线报备审核<br>多部门会签<br>监管数据看板</div>
+      <div class="mt-16"><span class="pill blue">PC 浏览器</span></div>
+    </div>
+    <div class="card hover" style="text-align:center;padding:28px 18px">
+      <div style="font-size:40px;margin-bottom:12px">⚙️</div>
+      <div style="font-size:15px;font-weight:700">运维管理后台</div>
+      <div class="card-desc mt-8" style="font-size:12px">基地/服务商上架<br>资质审核 · 财务<br>数据分析</div>
+      <div class="mt-16"><span class="pill green">PC 浏览器</span></div>
+    </div>
+    <div class="card hover" style="text-align:center;padding:28px 18px">
+      <div style="font-size:40px;margin-bottom:12px">🏪</div>
+      <div style="font-size:15px;font-weight:700">服务商端</div>
+      <div class="card-desc mt-8" style="font-size:12px">接单 · 复核<br>行程执行<br>评价回复 · 结算</div>
+      <div class="mt-16"><span class="pill amber">小程序+Web</span></div>
+    </div>
+  </div>
+
+  <div class="mt-24" style="padding:16px 24px;background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius)">
+    <div style="font-size:13px;color:var(--fg-3);font-weight:600;margin-bottom:10px">数据互通关系</div>
+    <div style="font-size:13px;color:var(--fg-2);line-height:1.7">
+      家长小程序 → 触发报名 → 学校端汇总 → 政府端审核 → 运维端分发 → 服务商端执行 → 评价回流至全端 · 全程同一份数据，权限隔离可见性
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10-11 DEMO ============ -->
+<section class="slide" data-title="Demo 演示">
+  <div class="slide-num">10 / <span>22</span></div>
+  <div class="eyebrow"><span class="dot"></span>03 · 核心亮点 · LIVE DEMO</div>
+  <h1 class="slide-title">这不是效果图，<span class="accent">是真实运行的产品</span></h1>
+  <p class="slide-sub">下方是投标前已开发的 Demo（手机端）— 可直接点击交互。包含首页、研学路线、课程、基地、学校九步流程、政府审核工作台等核心页面。</p>
+
+  <div class="row flex-1 mt-16" style="gap:24px;align-items:stretch">
+    <div class="demo-frame" style="flex:0 0 280px;height:560px">
+      <div class="demo-badge"><span class="live-dot"></span>LIVE DEMO</div>
+      <iframe src="https://chaozhou.duduvibe.com" title="潮州研学 Demo"></iframe>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px">
+      <div class="card" style="padding:18px"><div class="row aic" style="gap:12px"><span class="pill brand">可点</span><div><div style="font-weight:700;font-size:14px">10 个完整页面</div><div class="muted text-xs mt-8">首页 · 路线 · 课程 · 基地 · 资讯 · 我的 · 学校流程 · 政府审核 · 加盟 · 导师库</div></div></div></div>
+      <div class="card" style="padding:18px"><div class="row aic" style="gap:12px"><span class="pill blue">可交互</span><div><div style="font-weight:700;font-size:14px">九步业务流程可视化</div><div class="muted text-xs mt-8">完整呈现学校端从预报名到结算的 9 步状态机，含进度条与状态徽章</div></div></div></div>
+      <div class="card" style="padding:18px"><div class="row aic" style="gap:12px"><span class="pill green">可体验</span><div><div style="font-weight:700;font-size:14px">政府多部门审核工作台</div><div class="muted text-xs mt-8">教育局/文广旅体/交运/产投四部门会签，支持通过/退回操作 Demo</div></div></div></div>
+      <div class="card" style="padding:18px"><div class="row aic" style="gap:12px"><span class="pill amber">已上线</span><div><div style="font-weight:700;font-size:14px">chaozhou.duduvibe.com</div><div class="muted text-xs mt-8">已部署 Vercel CDN，全球可访问，可作为投标演示地址</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-title="交互流程演示">
+  <div class="slide-num">11 / <span>22</span></div>
+  <div class="eyebrow purple"><span class="dot"></span>03 · 核心流程</div>
+  <h1 class="slide-title">一次研学的<span class="accent">完整数字旅程</span></h1>
+  <p class="slide-sub">以「湘桥区城西中学 · 非遗研学」为例，展示一次真实研学活动在平台上的全流程流转。</p>
+
+  <div class="flex-1 center-y">
+    <div class="grid g4" style="gap:12px">
+      <div class="card" style="padding:18px;border-top:3px solid var(--brand)">
+        <div class="text-xs muted-2 bold">D-30 · 学校端</div>
+        <div style="font-weight:700;font-size:15px;margin-top:6px">① 发起预报名</div>
+        <div class="card-desc mt-8" style="font-size:12px">城西中学家委在 Web 端填写日期、统计 320 人（含减免 12 人、老师 18 人），勾选广济桥基地 + 配套服务。</div>
+      </div>
+      <div class="card" style="padding:18px;border-top:3px solid var(--amber)">
+        <div class="text-xs muted-2 bold">D-28 · 服务商</div>
+        <div style="font-weight:700;font-size:15px;margin-top:6px">② 单位复核接单</div>
+        <div class="card-desc mt-8" style="font-size:12px">城西旅行社、潮运大巴、人保财险等收到需求，复核自身接待能力，确认接单。</div>
+      </div>
+      <div class="card" style="padding:18px;border-top:3px solid var(--blue)">
+        <div class="text-xs muted-2 bold">D-25 · 政府端</div>
+        <div style="font-weight:700;font-size:15px;margin-top:6px">③ 四部门会签</div>
+        <div class="card-desc mt-8" style="font-size:12px">需求单推送至教育、文广旅体、交运、产投，各部门在线审核资质，全部通过。</div>
+      </div>
+      <div class="card" style="padding:18px;border-top:3px solid var(--green)">
+        <div class="text-xs muted-2 bold">D-20 · 家长端</div>
+        <div style="font-weight:700;font-size:15px;margin-top:6px">④ 报名缴费签约</div>
+        <div class="card-desc mt-8" style="font-size:12px">家长收到小程序推送，完成报名、在线缴费、购买保险、电子签约，全程留痕。</div>
+      </div>
+    </div>
+    <div style="text-align:center;color:var(--brand);font-size:18px;margin:14px 0">▼</div>
+    <div class="grid g3" style="gap:12px">
+      <div class="card" style="padding:18px;border-top:3px solid var(--purple)">
+        <div class="text-xs muted-2 bold">D-2 · 全端</div>
+        <div style="font-weight:700;font-size:15px;margin-top:6px">⑤ 订单分发复核</div>
+        <div class="card-desc mt-8" style="font-size:12px">人数确定后，系统自动将订单分发至交通、餐饮、住宿等各环节，各方复核确认。</div>
+      </div>
+      <div class="card" style="padding:18px;border-top:3px solid var(--brand)">
+        <div class="text-xs muted-2 bold">D-Day · 执行</div>
+        <div style="font-weight:700;font-size:15px;margin-top:6px">⑥ 活动执行</div>
+        <div class="card-desc mt-8" style="font-size:12px">研学活动执行，GPS 打卡、应急联络、行程进度实时回传至学校与监管端。</div>
+      </div>
+      <div class="card" style="padding:18px;border-top:3px solid var(--green)">
+        <div class="text-xs muted-2 bold">D+2 · 结算</div>
+        <div style="font-weight:700;font-size:15px;margin-top:6px">⑦ 评价 → 结算</div>
+        <div class="card-desc mt-8" style="font-size:12px">学校对基地、交通、餐饮、导师评分，系统依据评分自动结算各环节费用。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 GOVT FLOW ============ -->
+<section class="slide" data-title="政府监管流程">
+  <div class="slide-num">12 / <span>22</span></div>
+  <div class="eyebrow blue"><span class="dot"></span>03 · 政府监管</div>
+  <h1 class="slide-title">政府端：<span class="accent">报备 → 审核</span> 双闭环</h1>
+  <p class="slide-sub">政府侧流程简洁而严谨：所有研学活动须先报备，经多部门审核通过后方可执行。审核不通过则退回重选，形成闭环。</p>
+
+  <div class="flex-1 center-y">
+    <div class="grid g4" style="gap:16px">
+      <div class="card" style="padding:24px;text-align:center">
+        <div style="font-size:36px;margin-bottom:10px">📋</div>
+        <div style="font-weight:700;font-size:16px">在线报备</div>
+        <div class="card-desc mt-8">学校/服务商提交研学计划，结构化录入路线、人数、配套、日期</div>
+      </div>
+      <div class="card" style="padding:24px;text-align:center;border-color:var(--blue)">
+        <div style="font-size:36px;margin-bottom:10px">🔍</div>
+        <div style="font-weight:700;font-size:16px">多部门会签</div>
+        <div class="card-desc mt-8">教育、文广旅体、交运、产投各自审核专业范畴，并行或串行</div>
+      </div>
+      <div class="card" style="padding:24px;text-align:center;border-color:var(--green)">
+        <div style="font-size:36px;margin-bottom:10px">✅</div>
+        <div style="font-weight:700;font-size:16px">通过 / 退回</div>
+        <div class="card-desc mt-8">全通过则生成可执行业务单；任一退回则回退学校重选，附退回意见</div>
+      </div>
+      <div class="card" style="padding:24px;text-align:center;border-color:var(--brand)">
+        <div style="font-size:36px;margin-bottom:10px">📊</div>
+        <div style="font-weight:700;font-size:16px">监管看板</div>
+        <div class="card-desc mt-8">全市研学活动实时呈现：报备数、通过率、执行中、异常预警</div>
+      </div>
+    </div>
+
+    <div class="grid g4 mt-32" style="gap:16px">
+      <div class="stat"><div class="num blue">4</div><div class="lbl">会签部门</div></div>
+      <div class="stat"><div class="num brand">2</div><div class="lbl">审核结果（通过/退回）</div></div>
+      <div class="stat"><div class="num amber">100%</div><div class="lbl">流程留痕</div></div>
+      <div class="stat"><div class="num green">实时</div><div class="lbl">监管数据穿透</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 OPS FLOW ============ -->
+<section class="slide" data-title="平台运维">
+  <div class="slide-num">13 / <span>22</span></div>
+  <div class="eyebrow green"><span class="dot"></span>03 · 平台运维端</div>
+  <h1 class="slide-title">运维端：<span class="accent">资源全生命周期</span>管理</h1>
+  <p class="slide-sub">产投平台运维方负责所有资源的上架、审核、分发、结算与分析，是整个生态的「中枢」。</p>
+
+  <div class="grid g3 flex-1 center-y mt-16">
+    <div class="card">
+      <div class="card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1V9.5z"/></svg></div>
+      <div class="card-title mt-16">资源上架管理</div>
+      <div class="card-desc">21 家基地、旅行社、运输公司、保险、餐饮、住宿 — 统一上架、分类、编辑、上下架控制。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg></div>
+      <div class="card-title mt-16">资质审核 · 年检</div>
+      <div class="card-desc">所有服务商入驻强制资质审核，到期年检提醒，黑白名单管理，淘汰不合规单位。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+      <div class="card-title mt-16">人才库 · 导师管理</div>
+      <div class="card-desc">非遗传承人、研学导师入库管理，专业领域、从教经历、评价评分、排期调度。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div class="card-title mt-16">财务审核 · 结算</div>
+      <div class="card-desc">资金存管、对账、发票管理；依据评价自动生成各环节结算单，支持多级审核。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg></div>
+      <div class="card-title mt-16">数据分析看板</div>
+      <div class="card-desc">报名转化、基地热度、路线排行、评价分布、收入统计 — 多维度可视化决策支持。</div>
+    </div>
+    <div class="card">
+      <div class="card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33"/></svg></div>
+      <div class="card-title mt-16">后台维护 · 权限</div>
+      <div class="card-desc">RBAC 细粒度权限、操作日志、系统配置、内容审核 — 满足政务级运维要求。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 PARENT EXPERIENCE ============ -->
+<section class="slide" data-title="家长端体验">
+  <div class="slide-num">14 / <span>22</span></div>
+  <div class="eyebrow"><span class="dot"></span>03 · 家长端</div>
+  <h1 class="slide-title">家长端：<span class="accent">省心、透明、放心</span></h1>
+  <p class="slide-sub">家长是最终付费者与决策者。我们用极致的小程序体验消除信息差，让报名像网购一样简单。</p>
+
+  <div class="row flex-1 mt-16" style="gap:20px;align-items:stretch">
+    <div style="flex:0 0 260px;display:flex;align-items:center;justify-content:center">
+      <div style="width:240px;height:480px;border:8px solid #1a1a1a;border-radius:36px;overflow:hidden;background:#fff;box-shadow:var(--shadow)">
+        <iframe src="https://chaozhou.duduvibe.com/#mine" style="width:100%;height:100%;border:0" title="家长端预览"></iframe>
+      </div>
+    </div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px">
+      <div class="card" style="padding:20px">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div class="card-icon brand" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <div><div style="font-weight:700">一触报名，告别纸质</div><div class="card-desc mt-8">小程序内完成报名信息填写、在线缴费、保险购买、电子签约，全程无纸化，3 分钟搞定。</div></div>
+        </div>
+      </div>
+      <div class="card" style="padding:20px">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div class="card-icon blue" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div style="font-weight:700">行程透明，实时可查</div><div class="card-desc mt-8">研学当天可查看孩子行程进度、GPS 定位、用餐住宿安排，消除"看不到"的焦虑。</div></div>
+        </div>
+      </div>
+      <div class="card" style="padding:20px">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div class="card-icon green" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg></div>
+          <div><div style="font-weight:700">费用明细，清清楚楚</div><div class="card-desc mt-8">每一笔费用（基地、交通、餐费、保险）逐项展示，资金存管保障，支持一键退费。</div></div>
+        </div>
+      </div>
+      <div class="card" style="padding:20px">
+        <div style="display:flex;gap:14px;align-items:flex-start">
+          <div class="card-icon amber" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg></div>
+          <div><div style="font-weight:700">资质背书，安全无忧</div><div class="card-desc mt-8">所有路线经政府审核，基地/车辆/保险均持证，官方平台背书，比私下找旅行社更可靠。</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15 KEY FEATURES ============ -->
+<section class="slide" data-title="核心功能矩阵">
+  <div class="slide-num">15 / <span>22</span></div>
+  <div class="eyebrow purple"><span class="dot"></span>03 · 功能蓝图</div>
+  <h1 class="slide-title">核心功能<span class="accent">矩阵</span></h1>
+  <p class="slide-sub">覆盖业务全场景的 28 项核心功能模块。一期聚焦核心闭环，二期扩展增值能力。</p>
+
+  <div class="flex-1 center-y">
+    <div class="grid g4" style="gap:12px;margin-bottom:16px">
+      <h2 class="section-title" style="grid-column:span 4;color:var(--brand)">一期（9 月初上线）· 核心闭环</h2>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">📋 学校需求单</div><div class="muted text-xs mt-8">预报名 · 勾选 · 提交</div></div>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">🏛️ 多部门会签</div><div class="muted text-xs mt-8">报备 · 审核 · 退回</div></div>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">🏪 业务单分发</div><div class="muted text-xs mt-8">产投分发 · 接单复核</div></div>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">💳 家长报名缴费</div><div class="muted text-xs mt-8">缴费 · 购险 · 电子签约</div></div>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">⭐ 评价体系</div><div class="muted text-xs mt-8">多维度评分 · 评价回流</div></div>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">💰 结算系统</div><div class="muted text-xs mt-8">评价驱动 · 资金存管</div></div>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">📊 监管看板</div><div class="muted text-xs mt-8">实时数据 · 异常预警</div></div>
+      <div class="card" style="padding:16px"><div style="font-weight:600;font-size:13px">⚙️ 运维后台</div><div class="muted text-xs mt-8">资源上架 · 资质审核</div></div>
+    </div>
+    <div class="grid g4" style="gap:12px">
+      <h2 class="section-title" style="grid-column:span 4;color:var(--fg-3)">二期（上线后 3-6 月迭代）· 增值扩展</h2>
+      <div class="card" style="padding:16px;opacity:.7"><div style="font-weight:600;font-size:13px">📍 实时定位追踪</div><div class="muted text-xs mt-8">GPS · 电子围栏</div></div>
+      <div class="card" style="padding:16px;opacity:.7"><div style="font-weight:600;font-size:13px">📜 研学电子档案</div><div class="muted text-xs mt-8">学生成长档案 · 证书</div></div>
+      <div class="card" style="padding:16px;opacity:.7"><div style="font-weight:600;font-size:13px">🤖 智能推荐</div><div class="muted text-xs mt-8">AI 路线匹配 · 千人千面</div></div>
+      <div class="card" style="padding:16px;opacity:.7"><div style="font-weight:600;font-size:13px">📈 BI 决策分析</div><div class="muted text-xs mt-8">行业洞察 · 趋势预测</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 16 TECH ARCH ============ -->
+<section class="slide" data-title="技术架构">
+  <div class="slide-num">16 / <span>22</span></div>
+  <div class="eyebrow blue"><span class="dot"></span>04 · 技术架构</div>
+  <h1 class="slide-title">现代化<span class="accent">技术架构</span></h1>
+  <p class="slide-sub">前后端分离 + 微服务 + 多端统一下发。技术栈成熟稳定，团队有同类型项目实战经验，保障 2 个月高质量交付。</p>
+
+  <div class="flex-1 center-y" style="gap:14px;display:flex;flex-direction:column">
+    <!-- 接入层 -->
+    <div class="arch-layer">
+      <div class="al-label">接入层</div>
+      <div class="arch-modules">
+        <div class="arch-mod"><span class="am-dot" style="background:var(--brand)"></span>家长微信小程序</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--brand)"></span>服务商小程序</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--blue)"></span>学校 Web 端</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--blue)"></span>政府工作台</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>运维管理后台</div>
+      </div>
+    </div>
+    <div style="text-align:center;color:var(--fg-4)">↑↓ HTTPS / WSS</div>
+    <!-- 网关层 -->
+    <div class="arch-layer">
+      <div class="al-label">网关层</div>
+      <div class="arch-modules">
+        <div class="arch-mod"><span class="am-dot" style="background:var(--amber)"></span>API 网关 · 鉴权 · 限流</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--amber)"></span>统一身份认证 (OAuth2)</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--amber)"></span>消息推送网关</div>
+      </div>
+    </div>
+    <!-- 服务层 -->
+    <div class="arch-layer">
+      <div class="al-label">微服务</div>
+      <div class="arch-modules">
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>订单服务</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>审核工作流</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>支付结算</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>资源管理</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>评价服务</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>消息通知</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--green)"></span>数据分析</div>
+      </div>
+    </div>
+    <!-- 数据层 -->
+    <div class="arch-layer">
+      <div class="al-label">数据层</div>
+      <div class="arch-modules">
+        <div class="arch-mod"><span class="am-dot" style="background:var(--purple)"></span>MySQL · 主业务</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--purple)"></span>Redis · 缓存</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--purple)"></span>对象存储 · OSS</div>
+        <div class="arch-mod"><span class="am-dot" style="background:var(--purple)"></span>ElasticSearch · 搜索</div>
+      </div>
+    </div>
+    <!-- 技术栈 -->
+    <div class="row mt-8" style="gap:8px;flex-wrap:wrap">
+      <span class="pill brand">前端：Vue3 + UniApp + Vant</span>
+      <span class="pill blue">后端：Java Spring Cloud</span>
+      <span class="pill green">数据库：MySQL 8 + Redis</span>
+      <span class="pill amber">部署：云服务器 + CDN</span>
+      <span class="pill purple">DevOps：Docker + CI/CD</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 17 SECURITY ============ -->
+<section class="slide" data-title="安全保障">
+  <div class="slide-num">17 / <span>22</span></div>
+  <div class="eyebrow amber"><span class="dot"></span>04 · 安全与合规</div>
+  <h1 class="slide-title">政务级<span class="accent">安全合规</span>保障</h1>
+  <p class="slide-sub">涉及未成年人信息、资金交易、政府数据 — 安全非可选项。我们从制度、技术、运维三层面构建防护体系。</p>
+
+  <div class="grid g3 flex-1 center-y mt-16">
+    <div class="card hover">
+      <div class="card-icon brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg></div>
+      <div class="card-title mt-16">等保 2.0 二级合规</div>
+      <div class="card-desc">系统按信息安全等级保护二级标准建设，通过定级、备案、测评，满足政务数据合规要求。</div>
+      <div class="tag-row mt-16"><span class="pill brand">等保二级</span><span class="pill">国密算法</span></div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div class="card-title mt-16">数据安全 · 隐私保护</div>
+      <div class="card-desc">未成年人信息加密存储、脱敏展示；遵循《未成年人保护法》《个人信息保护法》，最小化采集。</div>
+      <div class="tag-row mt-16"><span class="pill blue">字段加密</span><span class="pill">脱敏展示</span><span class="pill">权限隔离</span></div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div class="card-title mt-16">资金安全 · 存管合规</div>
+      <div class="card-desc">对接持牌支付机构，资金存管账户体系，T+1 对账，杜绝资金挪用风险，符合教育部收费管理规定。</div>
+      <div class="tag-row mt-16"><span class="pill green">资金存管</span><span class="pill">银联/微信支付</span></div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="card-title mt-16">高可用 · 容灾</div>
+      <div class="card-desc">多可用区部署、数据库主从、自动备份、故障自动切换。承诺 99.9% SLA，研学高峰零中断。</div>
+      <div class="tag-row mt-16"><span class="pill amber">99.9% SLA</span><span class="pill">多活部署</span></div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <div class="card-title mt-16">电子签约 · 法律效力</div>
+      <div class="card-desc">对接权威 CA 机构，家长报名/免责条款电子签约，具备完整法律效力，纠纷可举证。</div>
+      <div class="tag-row mt-16"><span class="pill purple">CFCA 证书</span><span class="pill">存证链</span></div>
+    </div>
+    <div class="card hover">
+      <div class="card-icon brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <div class="card-title mt-16">应急 · 风控体系</div>
+      <div class="card-desc">研学活动安全应急联动、异常行为风控告警、操作审计日志全留存，事后可追溯定责。</div>
+      <div class="tag-row mt-16"><span class="pill brand">应急联动</span><span class="pill">风控告警</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 18 GANTT ============ -->
+<section class="slide" data-title="实施计划">
+  <div class="slide-num">18 / <span>22</span></div>
+  <div class="eyebrow green"><span class="dot"></span>05 · 实施计划</div>
+  <h1 class="slide-title">2 个月<span class="accent">交付甘特图</span></h1>
+  <p class="slide-sub">从合同签订到 9 月初上线，共 8 周。Demo 已完成 30%，实际开发周期充裕。采用敏捷迭代，每周交付可验收版本。</p>
+
+  <div class="flex-1 center-y">
+    <div class="gantt-weeks">
+      <span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span>
+    </div>
+    <div style="border-top:1px solid var(--line);padding-top:14px">
+      <div class="gantt-row">
+        <div class="gantt-label">需求确认 · UI 设计</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:0%;width:18%;background:linear-gradient(90deg,#c8102e,#e63946)">需求 + UI</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">数据库 · 接口设计</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:12%;width:15%;background:linear-gradient(90deg,#0070f3,#00b3ff)">架构设计</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">核心后端微服务</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:20%;width:45%;background:linear-gradient(90deg,#0a8a4a,#22c55e)">订单/审核/支付/结算</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">家长小程序</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:25%;width:35%;background:linear-gradient(90deg,#c8102e,#e63946)">小程序开发</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">学校 / 政府 Web 端</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:30%;width:40%;background:linear-gradient(90deg,#8b5cf6,#a78bfa)">Web 多端开发</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">运维后台</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:40%;width:30%;background:linear-gradient(90deg,#f5a623,#fbbf24)">运维后台</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">联调 · 测试</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:60%;width:25%;background:linear-gradient(90deg,#525252,#737373)">集成测试 · UAT</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">等保测评 · 安全加固</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:70%;width:20%;background:linear-gradient(90deg,#c8102e,#e63946)">等保 · 安全</div></div>
+      </div>
+      <div class="gantt-row">
+        <div class="gantt-label">培训 · 上线交付</div>
+        <div class="gantt-track"><div class="gantt-bar" style="left:85%;width:15%;background:linear-gradient(90deg,#0a8a4a,#22c55e)">培训 + 上线</div></div>
+      </div>
+    </div>
+
+    <div class="row mt-32" style="gap:16px">
+      <div class="stat" style="flex:1"><div class="num brand">8</div><div class="lbl">周交付周期</div></div>
+      <div class="stat" style="flex:1"><div class="num blue">4</div><div class="lbl">里程碑验收点</div></div>
+      <div class="stat" style="flex:1"><div class="num green">每周</div><div class="lbl">可验收版本</div></div>
+      <div class="stat" style="flex:1"><div class="num amber">30%</div><div class="lbl">Demo 已完成</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 19 MILESTONES ============ -->
+<section class="slide" data-title="里程碑">
+  <div class="slide-num">19 / <span>22</span></div>
+  <div class="eyebrow green"><span class="dot"></span>05 · 里程碑交付物</div>
+  <h1 class="slide-title">四大<span class="accent">里程碑</span>，按期按质交付</h1>
+  <p class="slide-sub">每个里程碑都有明确的可验收交付物，客户可逐阶段验收，风险可控。</p>
+
+  <div class="grid g4 flex-1 center-y mt-16" style="gap:14px">
+    <div class="card hover" style="padding:24px;border-top:3px solid var(--brand)">
+      <div class="pill brand mb-16">M1 · 第 2 周末</div>
+      <div style="font-size:18px;font-weight:800">需求确认 + UI 定稿</div>
+      <div class="divider"></div>
+      <div class="card-desc"><strong>交付物：</strong></div>
+      <ul class="persona-list mt-8">
+        <li>PRD 需求文档（签字确认）</li>
+        <li>全端 UI 设计稿（Figma）</li>
+        <li>原型交互 Demo</li>
+        <li>数据库 ER 图</li>
+      </ul>
+    </div>
+    <div class="card hover" style="padding:24px;border-top:3px solid var(--blue)">
+      <div class="pill blue mb-16">M2 · 第 4 周末</div>
+      <div style="font-size:18px;font-weight:800">核心闭环 Alpha</div>
+      <div class="divider"></div>
+      <div class="card-desc"><strong>交付物：</strong></div>
+      <ul class="persona-list mt-8">
+        <li>家长小程序（报名缴费）</li>
+        <li>学校端（需求单提交）</li>
+        <li>后端核心微服务</li>
+        <li>测试环境可体验</li>
+      </ul>
+    </div>
+    <div class="card hover" style="padding:24px;border-top:3px solid var(--amber)">
+      <div class="pill amber mb-16">M3 · 第 6 周末</div>
+      <div style="font-size:18px;font-weight:800">全端 Beta · 联调</div>
+      <div class="divider"></div>
+      <div class="card-desc"><strong>交付物：</strong></div>
+      <ul class="persona-list mt-8">
+        <li>政府审核工作台</li>
+        <li>运维管理后台</li>
+        <li>评价结算系统</li>
+        <li>全链路联调通过</li>
+      </ul>
+    </div>
+    <div class="card hover" style="padding:24px;border-top:3px solid var(--green)">
+      <div class="pill green mb-16">M4 · 第 8 周末</div>
+      <div style="font-size:18px;font-weight:800">正式上线</div>
+      <div class="divider"></div>
+      <div class="card-desc"><strong>交付物：</strong></div>
+      <ul class="persona-list mt-8">
+        <li>生产环境部署</li>
+        <li>等保测评通过</li>
+        <li>培训文档 + 视频</li>
+        <li>源码 + 运维移交</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 20 TEAM ============ -->
+<section class="slide" data-title="团队">
+  <div class="slide-num">20 / <span>22</span></div>
+  <div class="eyebrow purple"><span class="dot"></span>05 · 项目团队</div>
+  <h1 class="slide-title">资深<span class="accent">专项团队</span>配置</h1>
+  <p class="slide-sub">7 人核心团队全程投入，平均 8 年 + 行业经验，含政务项目背景成员。项目经理单点对接，沟通零损耗。</p>
+
+  <div class="grid g4 flex-1 center-y mt-16" style="gap:14px">
+    <div class="card" style="text-align:center;padding:24px">
+      <div style="width:64px;height:64px;border-radius:50%;background:var(--brand-soft);color:var(--brand);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 12px">👨‍💼</div>
+      <div style="font-weight:700">项目经理 · 1</div>
+      <div class="muted text-xs mt-8">PMP 认证 · 政务项目经验</div>
+      <div class="card-desc mt-16" style="font-size:12px">需求管理 · 进度把控 · 客户对接 · 风险预警</div>
+    </div>
+    <div class="card" style="text-align:center;padding:24px">
+      <div style="width:64px;height:64px;border-radius:50%;background:var(--purple-soft);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 12px">🎨</div>
+      <div style="font-weight:700">UI/UX 设计 · 1</div>
+      <div class="muted text-xs mt-8">10 年 + 体验设计</div>
+      <div class="card-desc mt-16" style="font-size:12px">全端视觉 · 交互设计 · 设计规范</div>
+    </div>
+    <div class="card" style="text-align:center;padding:24px">
+      <div style="width:64px;height:64px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 12px">💻</div>
+      <div style="font-weight:700">前端工程师 · 2</div>
+      <div class="muted text-xs mt-8">Vue3 / UniApp / 小程序</div>
+      <div class="card-desc mt-16" style="font-size:12px">小程序 · Web 多端 · 组件库</div>
+    </div>
+    <div class="card" style="text-align:center;padding:24px">
+      <div style="width:64px;height:64px;border-radius:50%;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 12px">⚙️</div>
+      <div style="font-weight:700">后端工程师 · 2</div>
+      <div class="muted text-xs mt-8">Java Spring Cloud 微服务</div>
+      <div class="card-desc mt-16" style="font-size:12px">业务服务 · 支付结算 · 工作流</div>
+    </div>
+  </div>
+
+  <div class="card mt-24" style="padding:20px 24px;background:var(--bg-card)">
+    <div class="row between aic">
+      <div>
+        <div style="font-weight:700;font-size:15px">🛡️ 质量保障 · 测试 · 运维</div>
+        <div class="muted text-sm mt-8">另配专职测试工程师 1 名（自动化测试 + UAT）、DevOps 工程师 0.5 名（兼职，负责 CI/CD 与部署）</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:32px;font-weight:800;color:var(--brand)">7.5</div>
+        <div class="text-xs muted">人 · 全职投入</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 21 QUOTE ============ -->
+<section class="slide" data-title="报价">
+  <div class="slide-num">21 / <span>22</span></div>
+  <div class="eyebrow"><span class="dot"></span>06 · 商务报价</div>
+  <h1 class="slide-title"><span class="accent">50 万</span>，物超所值的整体方案</h1>
+  <p class="slide-sub">报价已包含需求、设计、开发、测试、部署、培训、等保、一年运维 — 全包干，无隐性费用。</p>
+
+  <div class="flex-1 center-y">
+    <table class="tbl">
+      <thead><tr><th>序号</th><th>项目模块</th><th>说明</th><th class="num">金额（元）</th></tr></thead>
+      <tbody>
+        <tr><td>01</td><td>需求分析与 UI 设计</td><td class="muted">PRD · 全端设计稿 · 交互原型</td><td class="num">45,000</td></tr>
+        <tr><td>02</td><td>家长微信小程序</td><td class="muted">报名 · 缴费 · 购险 · 签约 · 行程</td><td class="num">90,000</td></tr>
+        <tr><td>03</td><td>学校 Web 管理端</td><td class="muted">预报名 · 需求单 · 审核 · 评价</td><td class="num">70,000</td></tr>
+        <tr><td>04</td><td>政府监管工作台</td><td class="muted">报备审核 · 多部门会签 · 看板</td><td class="num">65,000</td></tr>
+        <tr><td>05</td><td>平台运维管理后台</td><td class="muted">资源上架 · 资质 · 财务 · 分析</td><td class="num">70,000</td></tr>
+        <tr><td>06</td><td>服务商端（小程序 + Web）</td><td class="muted">接单 · 复核 · 执行 · 结算</td><td class="num">40,000</td></tr>
+        <tr><td>07</td><td>后端微服务 + 数据库</td><td class="muted">订单 · 审核 · 支付 · 消息 · 分析</td><td class="num">60,000</td></tr>
+        <tr><td>08</td><td>安全 · 等保测评 · 上线部署</td><td class="muted">等保二级 · 安全加固 · 生产部署</td><td class="num">25,000</td></tr>
+        <tr><td>09</td><td>培训 + 文档 + 一年运维</td><td class="muted">操作培训 · 源码 · 12 个月质保</td><td class="num">35,000</td></tr>
+        <tr style="background:var(--brand-soft)"><td colspan="3" style="font-weight:800;font-size:15px;color:var(--brand)">合计（含税）</td><td class="num" style="font-weight:800;font-size:18px;color:var(--brand)">¥500,000</td></tr>
+      </tbody>
+    </table>
+
+    <div class="row mt-24" style="gap:12px">
+      <div class="pill brand">✓ 全包干无增项</div>
+      <div class="pill green">✓ 含一年免费运维</div>
+      <div class="pill blue">✓ 含等保测评费</div>
+      <div class="pill amber">✓ 含培训 + 源码交付</div>
+      <div class="pill">✓ 验收后付款 95%</div>
+      <div class="pill">✓ 5% 质保金（1 年）</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 22 CLOSING ============ -->
+<section class="slide cover" data-title="结尾">
+  <div class="cover-inner">
+    <div class="eyebrow"><span class="dot"></span>期待合作</div>
+    <h1 style="font-size:64px">让潮州研学<br><span class="accent">因我们而不同</span></h1>
+    <p class="lead" style="margin-top:24px">我们已准备好团队、Demo 与技术方案。<br>选择我们，9 月初见一个真正能跑起来的平台。</p>
+
+    <div class="grid g3 mt-32" style="max-width:780px;gap:16px">
+      <div class="card" style="background:rgba(255,255,255,.04);border-color:var(--line)">
+        <div class="text-xs muted-2 bold">DEMO</div>
+        <div style="font-weight:700;font-size:14px;margin-top:6px;color:var(--blue)">chaozhou.duduvibe.com</div>
+      </div>
+      <div class="card" style="background:rgba(255,255,255,.04);border-color:var(--line)">
+        <div class="text-xs muted-2 bold">报价</div>
+        <div style="font-weight:700;font-size:14px;margin-top:6px">¥500,000 全包</div>
+      </div>
+      <div class="card" style="background:rgba(255,255,255,.04);border-color:var(--line)">
+        <div class="text-xs muted-2 bold">交付</div>
+        <div style="font-weight:700;font-size:14px;margin-top:6px">2026 年 9 月初</div>
+      </div>
+    </div>
+
+    <div class="cover-meta">
+      <div class="cm-item"><div class="l">投标方</div><div class="v">智维科技（深圳）有限公司</div></div>
+      <div class="cm-item"><div class="l">联系方式</div><div class="v">contact@zhiweitech.com · 138-xxxx-xxxx</div></div>
+      <div class="cm-item"><div class="l">日期</div><div class="v">2026 年 7 月</div></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- Progress + controls -->
+<div class="progress" id="progress"></div>
+<div class="nav-controls">
+  <button class="nav-btn" id="prev" aria-label="上一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+  <div class="nav-counter" id="counter">1 / 22</div>
+  <button class="nav-btn" id="next" aria-label="下一页"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+</div>
+<div class="kbd-hint">
+  <span class="kbd">←</span><span class="kbd">→</span> 翻页 · <span class="kbd">F</span> 全屏 · <span class="kbd">Esc</span> 退出
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+let cur = 0;
+const progress = document.getElementById('progress');
+const counter = document.getElementById('counter');
+
+function go(i) {
+  cur = Math.max(0, Math.min(total - 1, i));
+  slides.forEach((s, idx) => s.classList.toggle('active', idx === cur));
+  progress.style.width = ((cur + 1) / total * 100) + '%';
+  counter.textContent = (cur + 1) + ' / ' + total;
+}
+document.getElementById('prev').onclick = () => go(cur - 1);
+document.getElementById('next').onclick = () => go(cur + 1);
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); go(cur + 1); }
+  if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(cur - 1); }
+  if (e.key === 'Home') go(0);
+  if (e.key === 'End') go(total - 1);
+  if (e.key === 'f' || e.key === 'F') {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  }
+});
+// touch swipe
+let tx = 0;
+document.addEventListener('touchstart', e => tx = e.touches[0].clientX);
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - tx;
+  if (Math.abs(dx) > 60) go(cur + (dx < 0 ? 1 : -1));
+});
+go(0);
+</script>
+</body>
+</html>
